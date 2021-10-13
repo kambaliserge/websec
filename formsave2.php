@@ -17,7 +17,7 @@ while ($p=mysqli_fetch_array($f)) {
 	}
 }
 if ($t==1) {
-	$query = "SELECT * FROM security WHERE status='Verified' ";
+	$query = "SELECT * FROM security WHERE username='$uname' AND status='Verified' ";
     $stmt = $conn->prepare($query);
     if($stmt->execute()){
     $result = $stmt->get_result();
